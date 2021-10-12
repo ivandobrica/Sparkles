@@ -1,0 +1,39 @@
+.products {
+    &__info {
+        padding: 2rem 0;
+    }
+    &__item:hover {
+        animation: shake 0.5s infinite;
+    }
+    &__text {
+        padding: 0.5rem 0;
+    }
+    &__heading {
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 0.5;
+    }
+    .new-line {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+}
+
+@include md {
+    .products {
+        &__image {
+            @include flex($justify-content: center, $align-items: center);
+        }
+    }
+}
+
+@include lg {
+    .products {
+        margin: 5rem 0;
+        padding: 5rem 0;
+        @include flex($justify-content: center, $align-items: center);
+        &__info {
+            padding: 0;
+        }
+    }
+}

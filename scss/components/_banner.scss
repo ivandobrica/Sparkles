@@ -1,0 +1,65 @@
+.banner {
+    margin: 4rem 0;
+    text-align: center;
+    &__wrapper {
+        position: relative;
+    }
+    &__circle {
+        animation: rotate 8s linear infinite;
+    }
+    &__item {
+        position: absolute;
+        &--passion {
+            animation: up 6s linear infinite alternate;
+            bottom: 5%;
+            left: 5%;
+            width: 60%;
+        }
+        &--lemon {
+            animation: down 6s linear infinite alternate;
+            top: 5%;
+            right: 5%;
+            width: 55%;
+        }
+        &--passion-can {
+            animation: down 5s linear infinite alternate;
+            top: 5%;
+            left: 10%;
+            width: 35%;
+        }
+        &--lemon-can {
+            animation: up 4s linear infinite alternate;
+            bottom: 5%;
+            right: 10%;
+            width: 40%;
+        }
+    }
+    
+}
+
+@include md {
+    .banner {
+        margin: 5rem 0;
+        &__heading {
+            font-size: 1.5rem;
+            
+        }
+    }
+}
+
+@include lg {
+    .banner {
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+        margin: 4rem 0;
+        &__wrapper {
+            width: 50%;
+        }
+        &__heading {
+            font-size: 2rem;
+            margin-top: -100px;
+            position: relative;
+            z-index: 9;
+        }
+    }
+}
+

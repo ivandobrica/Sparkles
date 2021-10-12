@@ -76,13 +76,22 @@
         &__wrapper {
             padding: 1rem 3rem;
         }
+
+        .logo {
+            width: 10rem;
+        }
+
+        .hamburger {
+            height: 3rem;
+            width: 3rem;
+        }
     }
 }
 
 @include lg {
     .navigation {
         &__wrapper {
-            padding: 1rem 0rem;
+            padding: 1rem 3rem;
         }
         &__list {
             display: flex;
@@ -109,15 +118,15 @@
 
         &__social {
             display: flex;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0 0.5rem 1rem;
         }
         &__social-item {
             text-align: center;
             font-size: 1.125rem;
             padding: 0 1rem;
             @include flex($justify-content: center, $align-items: center);
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background-color: $black;
             color: $white;
             border-radius: 50%;
@@ -125,10 +134,6 @@
             &:hover {
                 background: linear-gradient($linear-gradient);
             }
-        }
-
-        .logo {
-            width: 10rem;
         }
 
         .hamburger {
