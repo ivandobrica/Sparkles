@@ -1,0 +1,11 @@
+.content {
+    padding: 1rem 2rem;
+}
+
+@include md {
+    padding: 1rem 3rem;
+}
+
+@include lg {
+    padding: 1rem 0rem;
+}
