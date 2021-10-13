@@ -1,5 +1,5 @@
 .banner {
-    margin: 4rem 0;
+    margin: 5rem 0;
     text-align: center;
     &__wrapper {
         position: relative;
@@ -39,7 +39,6 @@
 
 @include md {
     .banner {
-        margin: 5rem 0;
         &__heading {
             font-size: 1.5rem;
             
@@ -50,7 +49,7 @@
 @include lg {
     .banner {
         @include flex($justify-content: center, $align-items: center, $flex-direction: column);
-        margin: 4rem 0;
+        margin: 0;
         &__wrapper {
             width: 50%;
         }
@@ -58,7 +57,7 @@
             font-size: 2rem;
             margin-top: -100px;
             position: relative;
-            z-index: 9;
+            z-index: 5;
         }
     }
 }

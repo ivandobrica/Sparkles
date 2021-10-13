@@ -74,7 +74,7 @@
 @include md {
     .navigation {
         &__wrapper {
-            padding: 1rem 3rem;
+            padding: 1rem 5rem;
         }
 
         .logo {
@@ -107,7 +107,7 @@
                 display:block;
                 content: '';
                 border-bottom: 4px solid $hover-red;
-                border-image: linear-gradient($linear-gradient) 1;
+                border-image: linear-gradient($linear-gradient-pink) 1;
                 transform: scaleX(0);  
                 transition: transform 250ms ease-in-out;
             }
@@ -132,7 +132,7 @@
             border-radius: 50%;
             margin: 0 0.5rem;
             &:hover {
-                background: linear-gradient($linear-gradient);
+                background: linear-gradient($linear-gradient-pink);
             }
         }
 

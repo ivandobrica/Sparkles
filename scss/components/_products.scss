@@ -12,10 +12,11 @@
         font-size: 2rem;
         text-transform: uppercase;
         line-height: 0.5;
+        font-family: 'Alegreya Sans SC', Helvetica, sans-serif;
     }
     .new-line {
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -23,6 +24,12 @@
     .products {
         &__image {
             @include flex($justify-content: center, $align-items: center);
+        }
+        &__heading {
+            font-size: 2.5rem;
+        }
+        .new-line {
+            font-size: 3.5rem;
         }
     }
 }
@@ -34,6 +41,9 @@
         @include flex($justify-content: center, $align-items: center);
         &__info {
             padding: 0;
+        }
+        .new-line {
+            font-size: 4rem;
         }
     }
 }

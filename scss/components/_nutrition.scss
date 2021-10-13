@@ -1,0 +1,56 @@
+.nutrition {
+    margin: 5rem 0;
+    &__product {
+        position: relative;
+    }
+    &__info {
+        position: absolute;
+        top: 5%;
+        right: 0;
+    }
+    &__desc {
+        text-align: right;
+    }
+    &__title {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: 'Alegreya Sans SC', Helvetica, sans-serif;
+    }
+    &__subtitle,
+    .new-line {
+        font-size: 2.75rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1;
+    }
+    &__subtitle {
+        padding-bottom: 1rem;
+    }
+    &__text {
+        padding-bottom: 1rem;
+    }
+}
+
+@include md {
+    .nutrition {
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__subtitle,
+        .new-line {
+            font-size: 5.5rem;
+        }
+        &__info {
+            right: 20%;
+        }
+    }
+}
+
+@include lg {
+    .nutrition {
+        @include flex($justify-content: center);
+        &__info {
+            right: 0;
+        }
+    }
+}

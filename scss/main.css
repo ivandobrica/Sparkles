@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', Helvetica, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.8;
@@ -343,11 +343,12 @@ ul {
   font-size: 2rem;
   text-transform: uppercase;
   line-height: 0.5;
+  font-family: 'Alegreya Sans SC', Helvetica, sans-serif;
 }
 
 .products .new-line {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -361,6 +362,12 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .products__heading {
+    font-size: 2.5rem;
+  }
+  .products .new-line {
+    font-size: 3.5rem;
   }
 }
 
@@ -381,10 +388,13 @@ ul {
   .products__info {
     padding: 0;
   }
+  .products .new-line {
+    font-size: 4rem;
+  }
 }
 
 .banner {
-  margin: 4rem 0;
+  margin: 5rem 0;
   text-align: center;
 }
 
@@ -434,9 +444,6 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .banner {
-    margin: 5rem 0;
-  }
   .banner__heading {
     font-size: 1.5rem;
   }
@@ -457,7 +464,7 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 4rem 0;
+    margin: 0;
   }
   .banner__wrapper {
     width: 50%;
@@ -466,7 +473,171 @@ ul {
     font-size: 2rem;
     margin-top: -100px;
     position: relative;
-    z-index: 9;
+    z-index: 5;
+  }
+}
+
+.nutrition {
+  margin: 5rem 0;
+}
+
+.nutrition__product {
+  position: relative;
+}
+
+.nutrition__info {
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+
+.nutrition__desc {
+  text-align: right;
+}
+
+.nutrition__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Alegreya Sans SC', Helvetica, sans-serif;
+}
+
+.nutrition__subtitle,
+.nutrition .new-line {
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.nutrition__subtitle {
+  padding-bottom: 1rem;
+}
+
+.nutrition__text {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nutrition__title {
+    font-size: 2.5rem;
+  }
+  .nutrition__subtitle,
+  .nutrition .new-line {
+    font-size: 5.5rem;
+  }
+  .nutrition__info {
+    right: 20%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .nutrition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nutrition__info {
+    right: 0;
+  }
+}
+
+.section {
+  margin: 5rem 0 10rem;
+}
+
+.section__title {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.section__title--bold {
+  font-weight: bold;
+}
+
+.section__title::before {
+  content: "The Story";
+  text-transform: uppercase;
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  opacity: 0.1;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.section__promise {
+  margin-bottom: 3rem;
+}
+
+.section__line {
+  width: calc(100% + 32px);
+  height: 3px;
+  background: linear-gradient(143deg, #a71a63 3.69%, #d65197 38.59%, #f8c0a6 69.31%, #eedc82 98.89%);
+  margin-bottom: 2rem;
+}
+
+.section__image {
+  position: relative;
+}
+
+.section__circle {
+  -webkit-animation: down 6s linear infinite alternate;
+          animation: down 6s linear infinite alternate;
+}
+
+.section__mascot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  -webkit-animation: toRight 4s linear infinite alternate;
+          animation: toRight 4s linear infinite alternate;
+}
+
+@media (min-width: 768px) {
+  .section__title {
+    font-size: 2.5rem;
+  }
+  .section__title::before {
+    font-size: 4rem;
+    top: 1.75rem;
+  }
+  .section__line {
+    width: calc(100% + 80px);
+  }
+}
+
+@media (min-width: 1025px) {
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section__title::before {
+    font-size: 8rem;
+    top: -2rem;
+    left: -3rem;
+  }
+  .section__line {
+    width: 200%;
+    max-width: 1200px;
+  }
+  .section__promise {
+    width: 70%;
+    padding-right: 2rem;
+  }
+  .section__image {
+    width: 30%;
   }
 }
 
@@ -602,7 +773,7 @@ ul {
 
 @media (min-width: 768px) {
   .navigation__wrapper {
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
   }
   .navigation .logo {
     width: 10rem;
@@ -700,7 +871,7 @@ ul {
 
 @media (min-width: 768px) {
   .content {
-    padding: 5rem 3rem;
+    padding: 5rem 5rem;
   }
 }
 

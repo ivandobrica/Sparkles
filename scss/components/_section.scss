@@ -1,0 +1,84 @@
+.section {
+    margin: 5rem 0 10rem;
+    &__title {
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        padding-bottom: 2rem;
+        position: relative;
+        &--bold {
+            font-weight: bold;
+        }
+        &::before {
+            content: "The Story";
+            text-transform: uppercase;
+            position: absolute;
+            top: 1.25rem;
+            left: 0;
+            opacity: 0.1;
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+    }
+    &__promise {
+        margin-bottom: 3rem;
+    }
+    &__line {
+        width: calc(100% + 32px);
+        height: 3px;
+        background: linear-gradient($linear-gradient-pink);
+        margin-bottom: 2rem;
+    }
+    &__image {
+        position: relative;
+    }
+    &__circle {
+        animation: down 6s linear infinite alternate;
+    }
+    &__mascot {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0px, -50%);
+        animation: toRight 4s linear infinite alternate;
+    }
+}
+
+@include md {
+    .section {
+        &__title {
+            font-size: 2.5rem;
+            &::before {
+                font-size: 4rem;
+                top: 1.75rem;
+            }
+        }
+        &__line {
+            width: calc(100% + 80px);
+        }
+    }
+}
+
+@include lg {
+    .section {
+        @include flex($justify-content: center);
+        &__title {
+            &::before {
+                font-size: 8rem;
+                top: -2rem;
+                left: -3rem;
+            }
+        }
+        &__line {
+            width: 200%;
+            max-width: 1200px;
+        }
+        &__promise {
+            width: 70%;
+            padding-right: 2rem;
+        }
+        &__image {
+            width: 30%;
+        }
+    }
+}
