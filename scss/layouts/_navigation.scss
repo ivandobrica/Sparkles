@@ -56,7 +56,7 @@
         padding: 0.5rem;
         font-size: 1.25rem;
         border-radius: 50px;
-        background-color: $silver;
+        background-color: $overlay-links;
         width: 100%;
         text-align: center;
         margin: 0.5rem 0;
@@ -131,8 +131,10 @@
             color: $white;
             border-radius: 50%;
             margin: 0 0.5rem;
+            transition: transform 0.5s;
             &:hover {
                 background: linear-gradient($linear-gradient-pink);
+                transform: scale(1.2);
             }
         }
 

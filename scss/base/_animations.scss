@@ -48,3 +48,20 @@
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+
+@keyframes typing {
+    50% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+    100% {
+       left: 0;
+    }
+}
+
+@keyframes slide {
+    100% {
+        top: -200%;
+    }
+}
