@@ -14,3 +14,22 @@ for(let i = 0; i < overlayAction.length; i++) {
     closeIcon.classList.toggle("hidden");
   })
 };
+
+
+let toTopBtn = document.querySelector(".scroll-btn");
+function scrollToTop() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    toTopBtn.style.visibility = "visible";
+    toTopBtn.style.opacity = "1";
+  } else {
+    toTopBtn.style.visibility = "hidden";
+    toTopBtn.style.opacity = "0";
+  }
+}
+window.onscroll = function() {
+  scrollToTop()
+};
+toTopBtn.addEventListener("click", function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});

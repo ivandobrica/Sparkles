@@ -15,46 +15,51 @@
 	<title>Twisted Sparkles</title>
 </head>
 <body>
-    <nav class="navigation">
-        <div class="navigation__wrapper">
-            <a class="logo" href="index.html">
-                <img src="https://twistedsparkles.co.za/wp-content/uploads/2021/06/Twisted-Sparkles-logo-simple.svg" alt="Twister Sparkles Logo">
-            </a>
-            <div class="navigation__links">
-                <div class="navigation__list">
-                    <a class="navigation__item" href="#home">Home</a>
-                    <a class="navigation__item" href="#about">About Us</a>
-                    <a class="navigation__item" href="#find">Find Us</a>
-                    <a class="navigation__item" href="#contact">Contact</a>
+    <header>
+        <nav class="navigation">
+            <div class="navigation__wrapper">
+                <a class="logo" href="index.html">
+                    <img src="https://twistedsparkles.co.za/wp-content/uploads/2021/06/Twisted-Sparkles-logo-simple.svg" alt="Twister Sparkles Logo">
+                </a>
+                <div class="navigation__links">
+                    <div class="navigation__list">
+                        <a class="navigation__item" href="#home">Home</a>
+                        <a class="navigation__item" href="#about">About Us</a>
+                        <a class="navigation__item" href="#find">Find Us</a>
+                        <a class="navigation__item" href="#contact">Contact</a>
+                    </div>
+                    <div class="navigation__social">
+                        <a class="navigation__social-item" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="navigation__social-item" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="navigation__social">
-                    <a class="navigation__social-item" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="navigation__social-item" href=""><i class="fab fa-instagram"></i></a>
-                </div>
+                <button class="hamburger" aria-label="Overlay navigation button">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times hidden"></i>
+                </button>
+    
             </div>
-            <button class="hamburger" aria-label="Overlay navigation button">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times hidden"></i>
-            </button>
-
+        </nav>
+    
+        <div class="overlay">
+            <div class="overlay__list">
+              <a class="overlay__item" href="#projects">Home</a>
+              <a class="overlay__item" href="#about">About Us</a>
+              <a class="overlay__item" href="#find">Find Us</a>
+              <a class="overlay__item" href="#contact">Contact</a>
+            </div>
+            <div class="overlay__social">
+                <a class="overlay__social-item" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="overlay__social-item" href=""><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="overlay">
-        <div class="overlay__list">
-          <a class="overlay__item" href="#projects">Home</a>
-          <a class="overlay__item" href="#about">About Us</a>
-          <a class="overlay__item" href="#find">Find Us</a>
-          <a class="overlay__item" href="#contact">Contact</a>
-        </div>
-        <div class="overlay__social">
-            <a class="overlay__social-item" href=""><i class="fab fa-facebook-f"></i></a>
-            <a class="overlay__social-item" href=""><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
-
-    <main class="content">
-
+    <main class="content" id="home">
+        <button class="scroll-btn">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        
         <section class="banner">
             <div class="banner__wrapper">
                 <div class="banner__circle">
@@ -81,7 +86,6 @@
             </div>
             <div class="banner__heading">
                 <h2 class="banner__title">Twisted Water</h2>
-                <!-- <h2 class="banner__desc">That Packs A Punch</h2> -->
                 <ul class="banner__desc">
                     <li class="banner__desc-item"><span>That Packs A Punch</span></li>
                     <li class="banner__desc-item"><span>Refreshingly Twisted</span></li>
@@ -245,7 +249,6 @@
                 <p class="products__text">Currently available in 2 flavours, passion fruit and lemon & lime.</p>
                 <p class="products__text">Aluminium cans are 100% and infinitely recyclable. They are also the most recycled substrate in South Africa with an estimated recovery rate of 76.8%</p>
             </div>
-
             <div class="products__image">
                 <div class="products__item">
                     <img src="./assets/Twisted-side-can-Passion.png" alt="">
@@ -256,7 +259,7 @@
             </div>
         </section>
 
-        <section class="section story">
+        <section class="section story" id="about">
             <div class="section__desc">
                 <h2 class="section__title">Brand <span class="section__title--bold">Promise</span></h2>
                 <div class="section__line"></div>
@@ -272,10 +275,52 @@
             </div>
         </section>
 
-        <section class="section find-us">
+        <section class="section find-us" id="find">
             <div class="section__desc">
                 <h2 class="section__title">Where You <span class="section__title--bold">Can Find Us</span></h2>
                 <div class="section__line"></div>
+                <div class="location">
+                    <div class="location__place">
+                        <h4 class="location__store">LOCO LIQ COWTHORNE</h4>
+                        <p class="location__address">12, CROWTHORNE SHOPPING CENTRE, MAIN RD & ARTHUR ROAD, CROWTHORNE AH, JOHANNESBURG, 1684</p>
+                        <h4 class="location__hood location__hood--green">GAUTENG</h4>
+                    </div>
+                    <div class="location__place">
+                        <h4 class="location__store">LOCO LIQ BLAIRGOWRIE</h4>
+                        <p class="location__address">BLAIRGOWRIE PLAZA, CONRAD DR, BLAIRGOWRIE, JOHANNESBURG, 2194</p>
+                        <h4 class="location__hood location__hood--green">GAUTENG</h4>
+                    </div>
+                    <div class="location__place">
+                        <h4 class="location__store">TOPS! MIDSTREAM</h4>
+                        <p class="location__address">MIDSTREAM SHOPPING CENTRE, BRAKFONTEIN RD, MIDSTREAM ESTATE, OLIFANTSFONTEIN, 1692</p>
+                        <h4 class="location__hood location__hood--green">GAUTENG</h4>
+                    </div>
+                    <div class="location__place">
+                        <h4 class="location__store">TOPS! MIDSTREAM RIDGE</h4>
+                        <p class="location__address">RIDGEWAY AVENUE SHOP 15, MIDSTREAM RIDGE SHOPPING CENTRE, MIDSTREAM RIDGE DR, 0140</p>
+                        <h4 class="location__hood location__hood--green">GAUTENG</h4>
+                    </div>
+                    <div class="location__place">
+                        <h4 class="location__store">TOPS! VALHALLA</h4>
+                        <p class="location__address">23 BROADWAY E, VALHALLA, PRETORIA, 0185</p>
+                        <h4 class="location__hood location__hood--green">GAUTENG</h4>
+                    </div>
+                    <div class="location__place">
+                        <h4 class="location__store">LIQUOR CITY LONEHILL</h4>
+                        <p class="location__address">LONEHILL SHOPPING CENTRE, LONEHILL BOULEVARD, LONEHILL, SANDTON, 2191</p>
+                        <h4 class="location__hood location__hood--green">GAUTENG</h4>
+                    </div>
+                    <div class="location__place">
+                        <h4 class="location__store">TOPS! SEAPOINT</h4>
+                        <p class="location__address">94A REGENT RD, SEA POINT, CAPE TOWN, 8060</p>
+                        <h4 class="location__hood location__hood--pink">WESTERN CAPE</h4>
+                    </div>
+                    <div class="location__place">
+                        <h4 class="location__store">TOPS! RIVERSIDE</h4>
+                        <p class="location__address">AT THE GROVE, R40 WHITERIVER ROAD, RIVERSIDE, NELSPRUIT 1200</p>
+                        <p class="location__hood location__hood--pink">MPUMALANGA</p>
+                    </div>
+                </div>
             </div>
             <div class="section__image">
                 <div class="section__circle">
@@ -287,7 +332,7 @@
             </div>
         </section>
 
-        <section class="section contact">
+        <section class="section contact" id="contact">
             <div class="section__desc">
                 <h2 class="section__title">Get In <span class="section__title--bold">Touch</span></h2>
                 <div class="section__line"></div>
@@ -317,8 +362,22 @@
                 </div>
             </div>
         </section>
-
     </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__social">
+                <a class="footer__social-item" href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="footer__social-item" href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>© 2021 Twisted Sparkles  | Designed & Powered by Dutwaa creative agency+
+            </p>
+        </div>
+    </footer>
 
 </body>
 <script src="./js/app.js"></script>

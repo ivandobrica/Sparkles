@@ -1,0 +1,25 @@
+.footer {
+    @include flex($justify-content: center, $align-items: center);
+    &__wrapper {
+        width: 80%;
+        padding-bottom: 2rem;
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+        text-align: center;
+    }
+    &__social {
+        display: flex;
+        &-item {
+            border-radius: 50%;
+            padding: 0 1rem;
+            width: 35px;
+            height: 35px;
+            @include flex($justify-content: center, $align-items: center, $flex-direction: row);
+            transition: all 0.5s;
+            &:hover {
+                background: linear-gradient($linear-gradient-pink);
+                transform: scale(1.2);
+                color: $white;
+            }
+        }
+    }
+}
